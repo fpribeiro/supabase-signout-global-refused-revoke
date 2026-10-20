@@ -1,0 +1,15 @@
+{
+  "name": "supabase-signout-global-refused-revoke",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reproduction: since auth-js 2.110.2, signOut({ scope: 'global' }) clears the local session before a failed remote logout is returned",
+  "scripts": {
+    "old": "node repro.mjs supabase-js-old",
+    "new": "node repro.mjs supabase-js-new"
+  },
+  "dependencies": {
+    "supabase-js-new": "npm:@supabase/supabase-js@2.118.0",
+    "supabase-js-old": "npm:@supabase/supabase-js@2.108.2"
+  }
+}
